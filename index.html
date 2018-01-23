@@ -9,29 +9,23 @@
 </head>
 
 <body>
-
-
-    <div id="demo"></div>
     <script>
         alert(window.navigator.userAgent)
         function isMobileDevice() {
-            return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
-        }
-        alert(isMobileDevice())
+           if ((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)) {
+                if(navigator.userAgent.indexOf('Android') !== -1){
+                    alert("I'm mobile, Android");
+                }
+                if(navigator.userAgent.indexOf('OS') !== -1){
+                    alert("I'm mobile, OS");
+                }
+           }
+           else {
+                alert("I'm desktop!");
+           }
+        };
+        isMobileDevice();
         
-    </script>
-
-    <script>
-        var txt = "";
-        txt += "<p>Browser CodeName: " + navigator.appCodeName + "</p>";
-        txt += "<p>Browser Name: " + navigator.appName + "</p>";
-        txt += "<p>Browser Version: " + navigator.appVersion + "</p>";
-        txt += "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>";
-        txt += "<p>Browser Language: " + navigator.language + "</p>";
-        txt += "<p>Browser Online: " + navigator.onLine + "</p>";
-        txt += "<p>Platform: " + navigator.platform + "</p>";
-        txt += "<p>User-agent header: " + navigator.userAgent + "</p>";
-        document.getElementById("demo").innerHTML = txt;
     </script>
 </body>
 
