@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div id="demo"></div>
+    <script>
+        alert(window.navigator.userAgent)
+        function isMobileDevice() {
+            return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+        }
+        alert(isMobileDevice())
+        
+    </script>
+
+    <script>
+        var txt = "";
+        txt += "<p>Browser CodeName: " + navigator.appCodeName + "</p>";
+        txt += "<p>Browser Name: " + navigator.appName + "</p>";
+        txt += "<p>Browser Version: " + navigator.appVersion + "</p>";
+        txt += "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>";
+        txt += "<p>Browser Language: " + navigator.language + "</p>";
+        txt += "<p>Browser Online: " + navigator.onLine + "</p>";
+        txt += "<p>Platform: " + navigator.platform + "</p>";
+        txt += "<p>User-agent header: " + navigator.userAgent + "</p>";
+        document.getElementById("demo").innerHTML = txt;
+    </script>
+</body>
+
+</html>
